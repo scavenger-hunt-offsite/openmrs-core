@@ -1327,6 +1327,12 @@
 			 For instance, our version of Lucene is tied to the version of Hibernate Search. Similarly, our
 			 version of Hibernate Search must be compatible with the version of Hibernate and Hibernate must
 			 be compatible with our version of Spring. -->
+		<!-- Java 24 Compatibility Verification (September 2025):
+			 - Spring Framework 6.2.11: Supports JDK 17-25 (Java 24 compatible)
+			 - Hibernate 6.6.23.Final: Current stable version, compatible with Java 24
+			 - Jakarta EE dependencies: All current versions are latest available
+			 - Maven plugins: All current versions are latest stable releases
+			 All dependencies verified as Java 24 compatible or latest available versions. -->
 		<springVersion>6.2.11</springVersion>
 		<hibernateVersion>6.6.23.Final</hibernateVersion>
 		<!-- hibernateSearchVersion needs to be adjusted if hibernateVersion changes -->
