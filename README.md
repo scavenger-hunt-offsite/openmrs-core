@@ -13,6 +13,8 @@ OpenMRS is a patient-based medical record system focusing on giving providers a 
 
 The mission of OpenMRS is to improve health care delivery in resource-constrained environments by coordinating a global community that creates a robust, scalable, user-driven, open source medical record system platform.
 
+<!-- Test comment added for dummy PR verification -->
+
 #### Table of Contents
 
 1. [Build](#build)
