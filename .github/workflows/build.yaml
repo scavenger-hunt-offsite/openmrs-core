@@ -21,14 +21,10 @@ jobs:
           - ubuntu-latest
           - windows-latest
         java-version:
-          - 21
-#          Current spring version only supports up to java 21
-#          - 24
+          - 24
         exclude:
           - platform: windows-latest
-            java-version: 21
-          #- platform: windows-latest
-          #  java-version: 24
+            java-version: 24
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v5
