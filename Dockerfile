@@ -8,8 +8,8 @@
 #	Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS 
 #	graphic logo is a trademark of OpenMRS Inc.
 
-ARG DEV_JDK=eclipse-temurin-21
-ARG RUNTIME_JDK=jdk21-temurin
+ARG DEV_JDK=eclipse-temurin-24
+ARG RUNTIME_JDK=jdk24-temurin
 
 ### Compile Stage (platform-agnostic)
 FROM --platform=$BUILDPLATFORM maven:3.9-$DEV_JDK AS compile
