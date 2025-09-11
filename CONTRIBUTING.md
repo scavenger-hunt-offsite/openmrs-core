@@ -38,6 +38,14 @@ Regardless of whether you're reporting the bug to the OpenMRS core team or to a 
 
 ## Contributing (Step-by-step)
 
+### Development Environment Requirements
+
+Before contributing to OpenMRS, ensure your development environment meets these requirements:
+
+- **Java**: JDK version 24 or higher
+- **Maven**: Version 3.8.0 or higher
+- **Git**: Latest stable version
+
 1. After finding a JIRA issue for the "Ready for Work" bug or feature on which you'd like to work, claim the issue by clicking the "Claim Issue" button. This will assign the issue to you and change its status to "In Progress".
 
 2. [Fork the repo](http://help.github.com/fork-a-repo) on which you're working, clone your forked repo to your local computer, and set up the upstream remote:
