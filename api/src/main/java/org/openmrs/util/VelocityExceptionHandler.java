@@ -41,8 +41,8 @@ public class VelocityExceptionHandler implements MethodExceptionEventHandler {
 			return null;
 		}
 		
-		// keep the default behavior
-		throw e;
+		log.error("Method exception in Velocity template for class: " + claz.getName() + ", method: " + method, e);
+		return null;
 	}
 	
 }
