@@ -9,7 +9,7 @@
  */
 package org.openmrs.api.impl;
 
-import org.apache.commons.lang.BooleanUtils;
+import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openmrs.MedicationDispense;
 import org.openmrs.api.APIException;

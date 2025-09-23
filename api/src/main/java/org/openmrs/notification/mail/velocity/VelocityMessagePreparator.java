@@ -14,7 +14,6 @@ import java.util.Properties;
 
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
-import org.apache.velocity.runtime.log.Log4JLogChute;
 import org.openmrs.notification.Message;
 import org.openmrs.notification.MessageException;
 import org.openmrs.notification.MessagePreparator;
@@ -43,9 +42,7 @@ public class VelocityMessagePreparator implements MessagePreparator {
 		try {
 			engine = new VelocityEngine();
 			Properties props = new Properties();
-			props.put("runtime.log.logsystem.class", Log4JLogChute.class.getName());
-			props.put("runtime.log.logsystem.log4j.category", "velocity");
-			props.put("runtime.log.logsystem.log4j.logger", "velocity");
+			props.put("runtime.log.name", "velocity");
 			engine.init(props);
 		}
 		catch (Exception e) {

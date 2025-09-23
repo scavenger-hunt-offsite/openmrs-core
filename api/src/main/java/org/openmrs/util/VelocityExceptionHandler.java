@@ -10,6 +10,8 @@
 package org.openmrs.util;
 
 import org.apache.velocity.app.event.MethodExceptionEventHandler;
+import org.apache.velocity.context.Context;
+import org.apache.velocity.util.introspection.Info;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,15 +24,15 @@ public class VelocityExceptionHandler implements MethodExceptionEventHandler {
 	
 	/**
 	 * When a user-supplied method throws an exception, the MethodExceptionEventHandler is invoked
-	 * with the Class, method name and thrown Exception. The handler can either return a valid
+	 * with the Context, Class, method name and thrown Exception. The handler can either return a valid
 	 * Object to be used as the return value of the method call, or throw the passed-in or new
 	 * Exception, which will be wrapped and propagated to the user as a MethodInvocationException
 	 *
-	 * @see org.apache.velocity.app.event.MethodExceptionEventHandler#methodException(java.lang.Class,
-	 *      java.lang.String, java.lang.Exception)
+	 * @see org.apache.velocity.app.event.MethodExceptionEventHandler#methodException(org.apache.velocity.context.Context,
+	 *      java.lang.Class, java.lang.String, java.lang.Exception, org.apache.velocity.util.introspection.Info)
 	 */
 	@Override
-	public Object methodException(Class claz, String method, Exception e) throws Exception {
+	public Object methodException(Context context, Class<?> claz, String method, Exception e, Info info) {
 		
 		log.debug("Claz: " + claz.getName() + " method: " + method, e);
 		
@@ -39,8 +41,8 @@ public class VelocityExceptionHandler implements MethodExceptionEventHandler {
 			return null;
 		}
 		
-		// keep the default behavior
-		throw e;
+		log.error("Method exception in Velocity template for class: " + claz.getName() + ", method: " + method, e);
+		return null;
 	}
 	
 }
